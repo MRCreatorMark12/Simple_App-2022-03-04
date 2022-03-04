@@ -17,7 +17,8 @@ namespace ClickMeApp
         public delegate void SetTextValueCallback(string value);
         public SetTextValueCallback SetTextValue;
         private Child_Form chForm;
-
+        Register_Form rr;
+      
 
         public Form1()
         {
@@ -51,6 +52,12 @@ namespace ClickMeApp
         private void AppendMessage()
         {
             SetTextValue(txtB_Input.Text);
+        }
+
+        private void btn_Register_Student_Click(object sender, EventArgs e)
+        {
+            rr = new Register_Form();
+            rr.Show();
         }
     }
 }
