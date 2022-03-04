@@ -36,6 +36,20 @@ namespace ClickMeApp
 
         private void btn_Append_Click(object sender, EventArgs e)
         {
+            AppendMessage();
+        }
+
+        private void txtB_Input_KeyDown(object sender, KeyEventArgs e)
+        {
+
+            if (e.KeyCode == Keys.Enter)
+            {
+                AppendMessage();
+            }
+        }
+
+        private void AppendMessage()
+        {
             SetTextValue(txtB_Input.Text);
         }
     }

@@ -49,6 +49,7 @@
             this.txtB_Input.Name = "txtB_Input";
             this.txtB_Input.Size = new System.Drawing.Size(250, 22);
             this.txtB_Input.TabIndex = 4;
+            this.txtB_Input.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtB_Input_KeyDown);
             // 
             // btn_Append
             // 
