@@ -10,11 +10,23 @@ using System.Windows.Forms;
 
 namespace ClickMeApp.Forms
 {
-    public partial class Input_Form : Form
+    public delegate void SetParameterValueDelegate(string value);
+    public partial class Child_Form : Form
     {
-        public Input_Form()
+      
+        public Child_Form()
         {
             InitializeComponent();
         }
+
+        public void SetText(string value)
+        {
+            lbl_Message.Text = value;
+        }
+     
+
+      
+
+       
     }
 }

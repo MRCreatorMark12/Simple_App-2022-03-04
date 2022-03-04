@@ -1,6 +1,6 @@
 ﻿namespace ClickMeApp.Forms
 {
-    partial class Input_Form
+    partial class Child_Form
     {
         /// <summary>
         /// Required designer variable.
@@ -28,12 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.lbl_Message = new System.Windows.Forms.Label();
+            this.SuspendLayout();
+            // 
+            // lbl_Message
+            // 
+            this.lbl_Message.AutoSize = true;
+            this.lbl_Message.Location = new System.Drawing.Point(328, 132);
+            this.lbl_Message.Name = "lbl_Message";
+            this.lbl_Message.Size = new System.Drawing.Size(46, 17);
+            this.lbl_Message.TabIndex = 0;
+            this.lbl_Message.Text = "label1";
+            // 
+            // Child_Form
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lbl_Message);
+            this.Name = "Child_Form";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Input_Form";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Label lbl_Message;
     }
 }

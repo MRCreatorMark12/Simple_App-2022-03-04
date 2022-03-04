@@ -7,14 +7,36 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ClickMeApp.Forms;
 
 namespace ClickMeApp
 {
+    public delegate void SetParameterValueDelegate(string value);
     public partial class Form1 : Form
     {
+        public delegate void SetTextValueCallback(string value);
+        public SetTextValueCallback SetTextValue;
+        private Child_Form chForm;
+
+
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void btn_ShowForm_Click(object sender, EventArgs e)
+        {
+            if(chForm == null)
+            {
+                chForm = new Child_Form();
+            }
+                this.SetTextValue += new SetTextValueCallback(chForm.SetText);
+                chForm.Show();
+        }
+
+        private void btn_Append_Click(object sender, EventArgs e)
+        {
+            SetTextValue(txtB_Input.Text);
         }
     }
 }
